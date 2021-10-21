@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { convertCompilerOptionsFromJson } from 'typescript';
+
+@IonicPage()
+@Component({
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
+})
+export class SignupPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+
+  signupUser() {
+    console.log("Enviou o form");
+  }
+ 
+
+}
