@@ -7,7 +7,6 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
      
-        console.log("Passou no interceptor");
         return next.handle(req)
         .catch((error, caught) => {
             let errorObj = error;
@@ -18,7 +17,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS
                 errorObj = JSON.parse(errorObj);
             }
 
-            console.log("Erro detectado pelo Interceptor:");
+        //    console.log("Erro detectado pelo Interceptor:");
             console.log(errorObj);
 
             return Observable.throw(errorObj);	 
