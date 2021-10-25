@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
 import { ProdutoService } from '../../services/domain/produto.service';
 import { API_CONFIG } from '../../config/api.config';
+import { convertCompilerOptionsFromJson } from 'typescript';
 
 @IonicPage()
 @Component({
