@@ -14,7 +14,7 @@
         <img [src]="item.produto.imageUrl || 'assets/imgs/prod.jpg'">
       </ion-thumbnail>
       <h2>{{item.produto.nome}}</h2>
-      <p>{{item.produto.preco | currency}}</p>
+      <p>{{item.produto.preco | currency: 'BRL' }}</p>
       <ion-icon class="nolinebreak" name="remove-circle" color="primary" (click)="decreaseQuantity(item.produto)"></ion-icon>
       <p  class="nolinebreak">{{item.quantidade}}</p>
       <ion-icon name="add-circle" color="primary" (click)="increaseQuantity(item.produto)"></ion-icon>

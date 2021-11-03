@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title *ngIf="codPedido">Pedido regstrado!</ion-title>
+    <ion-title *ngIf="codPedido">Pedido registrado!</ion-title>
     <ion-title *ngIf="!codPedido">Confira seu pedido</ion-title>
   </ion-navbar>
 </ion-header>
@@ -23,12 +23,12 @@
           <h2>{{item.produto.nome}}</h2>
           <p>{{item.produto.preco | currency}}</p>
           <p class="nolinebreak">{{item.quantidade}}</p>
-          <p item-end>{{item.produto.preco * item.quantidade | currency}}</p>
+          <p item-end>{{item.produto.preco * item.quantidade | currency: 'BRL' }}</p>
         </ion-item> 
 
         <ion-item>
           <h2>Total</h2>
-          <h2 item-end>{{total() | currency}}</h2>
+          <h2 item-end>{{total() | currency: 'BRL' }}</h2>
         </ion-item>
       </ion-list> 
     </ion-card>

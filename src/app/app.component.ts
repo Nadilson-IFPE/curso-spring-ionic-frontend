@@ -23,7 +23,7 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Profile', component: 'ProfilePage'},
+      { title: 'Perfil', component: 'ProfilePage'},
       { title: 'Categorias', component: 'CategoriasPage' },
       {title: 'Carrinho', component: 'CartPage'},
       { title: 'Logout', component: '' }
