@@ -3,7 +3,7 @@ import { AuthInterceptorProvider } from './../interceptors/auth-interceptor';
 import { ClienteService } from './../services/domain/cliente.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, LOCALE_ID, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -16,6 +16,11 @@ import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
 import { ProdutoService } from '../services/domain/produto.service';
 import { ImageUtilService } from '../services/image-util.service';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
+
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -42,7 +47,8 @@ import { ImageUtilService } from '../services/image-util.service';
     ClienteService,
     ProdutoService,
     CartService,
-    ImageUtilService
+    ImageUtilService,
+    {provide: LOCALE_ID, useValue: 'pt-BR' }
   ]
 })
 export class AppModule {}
